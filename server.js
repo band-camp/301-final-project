@@ -29,6 +29,9 @@ app.post('/search-results', loadSimilarArtists);
 //Load events route
 app.get('/button', loadEvents);
 
+
+app.get('/bands/:bandname', loadEvents);
+
 //Server listening to requests on PORT
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
@@ -67,11 +70,12 @@ function loadSimilarArtists(request, response) {
 }
 // Events route handler
 function loadEvents(request, response){
-  let url = `https://app.ticketmaster.com/discovery/v2/events.json?classifficationName=music&postalCode=98121&keyword=${this.bandname}&apikey=${process.env.TICKETMASTER_API_KEY}`
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?classifficationName=music&postalCode=98121&keyword=${request.params.bandname}&apikey=${process.env.TICKETMASTER_API_KEY}`
 
   superagent.get(url)
-    .then(results => results.body._embedded.events.map(eventResults => new Event(eventResults)))
-    .then(results => {
-      response.render('pages/searches/show',{searchResults: results})
-    })
+    .then(results => console.log(results))
+    // .then(results => results.body._embedded.events.map(eventResults => new Event(eventResults)))
+    // .then(results => {
+      // response.render('pages/events/show',{eventResults: results})
+    // })
 }
