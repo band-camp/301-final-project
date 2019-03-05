@@ -8,7 +8,7 @@
         <%- include('partials/header') %>
     </header>
 
-    <main>
+    <main id="indexmain">
         <video autoplay muted loop id="vid"><source src="images/CROWD_JUMPS_LIGHTS_PULSE.mov"  type="video/mp4"></video>
         <div id="band-search">
             <form id="search-form" action="/search-results" method="post">
@@ -19,8 +19,7 @@
 
     </main>
 
-    <footer>
-        <%- include('partials/footer') %>
-    </footer>
+
+    <%- include('partials/footer') %>
 </body>
 </html>

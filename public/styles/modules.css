@@ -28,9 +28,12 @@ input[type="text"] {
 }
 
 #vid{
+  object-fit: fill;
   align-self: center;
   position:absolute;
   z-index: -1;
   height: 100vh;
+  width: 100%;
   top: 0px;
+  margin-bottom: 0px;
 }
