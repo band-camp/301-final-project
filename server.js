@@ -48,9 +48,10 @@ function Band(info){
 function Event(info){
   this.eventName = info.name;
   this.eventURL = info.url;
-  this.image = info.images.url;
+  this.image = info.images[0].url;
   this.date = info.dates.start.localDate;
   this.startTime = info.dates.start.localTime;
+  this.venue = info._embedded.venues[0].name;
 }
 
 function loadIndex(request, response) {
@@ -70,12 +71,11 @@ function loadSimilarArtists(request, response) {
 }
 // Events route handler
 function loadEvents(request, response){
-  let url = `https://app.ticketmaster.com/discovery/v2/events.json?classifficationName=music&postalCode=98121&keyword=${request.params.bandname}&apikey=${process.env.TICKETMASTER_API_KEY}`
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?classifficationName=music&keyword=${request.params.bandname}&apikey=${process.env.TICKETMASTER_API_KEY}`
 
   superagent.get(url)
-    .then(results => console.log(results))
-    // .then(results => results.body._embedded.events.map(eventResults => new Event(eventResults)))
-    // .then(results => {
-      // response.render('pages/events/show',{eventResults: results})
-    // })
+    .then(results => results.body._embedded.events.map(eventResults => new Event(eventResults)))
+    .then(results => {
+      response.render('pages/events/show',{eventResults: results})
+    })
 }
