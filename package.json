@@ -1,0 +1,26 @@
+{
+  "name": "301-final-project",
+  "version": "1.0.0",
+  "description": "Music events application that finds similar artists playing nearby.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.8.1",
+    "superagent": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/band-camp/301-final-project.git"
+  },
+  "author": "Vanessa Wei, Aaron Ferris, Chris Morton, Cory Henderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/band-camp/301-final-project/issues"
+  },
+  "homepage": "https://github.com/band-camp/301-final-project#readme"
+}
