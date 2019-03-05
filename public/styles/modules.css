@@ -1,0 +1,40 @@
+h1{
+
+}
+
+input[type="text"] {
+    text-align:center;
+}
+
+#search-form{
+    width: 50%;
+    margin: 200px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#search-form > * {
+    margin: 10px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#search-form > input {
+    border-radius: 5px;
+}
+
+.icon{
+  height:1.5rem;
+  filter: invert(100%)
+}
+
+#vid{
+  object-fit: fill;
+  align-self: center;
+  position:absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  margin-bottom: 0px;
+}

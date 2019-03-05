@@ -22,7 +22,11 @@ Javascript, HTML, CSS, Express.js, Postgresql, Superagent
 #Versions and corresponding features
 
 ##2.0.x
-
+  3-5-2018 - Feature 1: Design Mobile Layout of pages
+  3-5-2018 - Feature 2: Link TasteDive API to TicketMaster API
+  3-5-2018 - Feature 3: Render Ticketmaster Results
+  3-5-2018 - Feature 4: SQL Database
+  
 ##1.0.x
   3-4-2018 - Feature 1: Get Data from TasteDive API 
   3-4-2018 - Feature 2: Partials
@@ -36,4 +40,7 @@ image created from website pixabay https://pixabay.com/vectors/wagon-pioneer-car
 
 Search icon: https://www.maxpixel.net/Magnifier-User-Logo-Theme-Icons-Icon-Www-1787362 
 From website Max Pixel, labeled for commercial reuse.
+
+Broken Wagon image: https://rockyone.smugmug.com/Machines/Farming-Australia-The-backbone/i-MkKKJmt
+From website SmugMug.com user Rockyone For educational use
 
