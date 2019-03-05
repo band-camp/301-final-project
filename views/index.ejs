@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('partials/head') %>
-</head>
-<body>
-    <header>
-        <%- include('partials/header') %>
-    </header>
+  <head>
+      <%- include('partials/head') %>
+  </head>
+  <body>
+      <header>
+          <%- include('partials/header') %>
+      </header>
 
-    <main id="indexmain">
-        <video autoplay muted loop id="vid"><source src="images/CROWD_JUMPS_LIGHTS_PULSE.mov"  type="video/mp4"></video>
-        <div id="band-search">
-            <form id="search-form" action="/search-results" method="post">
-                <input type="text" name="search" placeholder="Enter a Band" required>
-                <button type="submit">Find Music!</button>
-            </form>
-        </div>
+      <main id="indexmain">
+          <video autoplay muted loop id="vid"><source src="images/CROWD_JUMPS_LIGHTS_PULSE.mov"  type="video/mp4"></video>
+          <div id="band-search">
+              <form id="search-form" action="/search-results" method="post">
+                  <input type="text" name="search" placeholder="Enter a Band" required>
+                  <button type="submit">Find Music!</button>
+              </form>
+          </div>
 
-    </main>
-
-
-    <%- include('partials/footer') %>
-</body>
+      </main>
+      <footer>
+        <%- include('partials/footer') %>
+      </footer>
+  </body>
 </html>

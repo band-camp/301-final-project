@@ -29,6 +29,7 @@ input[type="text"] {
 }
 
 #vid{
+  filter: invert(10%);
   object-fit: fill;
   align-self: center;
   position:absolute;
