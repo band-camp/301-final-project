@@ -25,6 +25,7 @@ input[type="text"] {
 
 .icon{
   height:1.5rem;
+  filter: invert(100%)
 }
 
 #vid{
@@ -32,7 +33,7 @@ input[type="text"] {
   align-self: center;
   position:absolute;
   z-index: -1;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   top: 0px;
   margin-bottom: 0px;

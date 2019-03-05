@@ -1,8 +1,9 @@
 
 /* ------ MOBILE -------*/
 #indexmain{
+  position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 }
 @media screen and (max-width: 736px){
     
