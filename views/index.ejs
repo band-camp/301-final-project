@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <main>
+        <h1>Band Wagon</h1>
+
+        <div id="band-search">
+            <form action="/search-results" method="post">
+                <input type="text" name="search" placeholder="Enter a Band" required>
+                <button type="submit">Find Music!</button>
+            </form>
+        </div>
+
+    </main>
+</body>
+</html>
