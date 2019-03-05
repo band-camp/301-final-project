@@ -22,3 +22,15 @@ input[type="text"] {
 #search-form > input {
     border-radius: 5px;
 }
+
+.icon{
+  height:1.5rem;
+}
+
+#vid{
+  align-self: center;
+  position:absolute;
+  z-index: -1;
+  height: 100vh;
+  top: 0px;
+}
