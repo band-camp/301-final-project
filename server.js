@@ -13,6 +13,11 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+//PG instantiation
+const client = new pg.Client(process.env.DATABASE_URL)
+client.connect();
+client.on('error', err => console.error(err));
+
 // Application Middleware
 app.use(express.urlencoded({ extended: true }));
 
