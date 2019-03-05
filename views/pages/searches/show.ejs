@@ -13,7 +13,7 @@
         <div>
           <% searchResults.forEach(band =>{ %>
             <ul id="bands">
-              <li><button id= "<%= band.bandname %>" class="band-item"><%= band.bandname %></button>
+              <li><button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>"><%= band.bandname %></a></button>
                 
               </li>
                 <ul id="events">
