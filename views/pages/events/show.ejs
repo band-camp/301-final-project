@@ -11,14 +11,16 @@
     <main>
 
         <div>
-          <% evnetResults.forEach(event =>{ %>
+          <% eventResults.forEach(event =>{ %>
             <ul id="bands">
-              <li><button id= "<%= event.eventName %>" class="band-item"><a href="/bands/<%= event.eventName %>"><%= event.eventName %></a></button>
-                
-              </li>
-                <ul id="events">
-                  <li> </li>
-                </ul>
+              <div id="image">
+                <img src="<%= event.image %>">
+              </div>
+              <li id="eventName"><%= event.eventName %></li>
+              <li id="venue"><%= event.venue %></li>
+              <li id="eventURL"><%= event.eventURL %></li>
+              <li id="date"><%= event.date %></li>
+              <li id="time"><%= event.startTime %></li>
             </ul>
 
           <% }) %>  
