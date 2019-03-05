@@ -1,26 +1,33 @@
 'use strict';
 
-//Dependencies
-
+// Application Dependencies
 const express = require('express');
-const pg = require('pg');
 const superagent = require('superagent');
+const ejs = require('ejs');
+const pg = require('pg');
 
-//Application setup
-const app = express();
-const PORT = process.env.PORT || 3000;
+// Environment Variables
 require('dotenv').config();
 
-app.use(express.static('./public'));
-app.set('view engine', 'ejs');
+// Application Setup
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-//Database setup
-const client = new pg.Client(process.env.DATABASE_URL);
-client.connect();
-client.on('error', err => console.error(err));
+// Application Middleware
+app.use(express.urlencoded({ extended: true }));
+
+// Set the file locations for ejs templates and static files like CSS
+app.set('view engine', 'ejs');
+app.use(express.static('./public'));
+
+//load index
+app.get('/', loadIndex);
 
 //Similar Artists Route
 app.post('/search-results', loadSimilarArtists);
+
+//Load events route
+app.get('/button', loadEvents);
 
 //Server listening to requests on PORT
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
@@ -32,7 +39,20 @@ app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 app.get('*', (request, response) => response.status(404).render('pages/error'));
 
 function Band(info){
-  this.bandname = info.results.name;
+  this.bandname = info.Name;
+}
+
+function Event(info){
+  this.eventName = info.name;
+  this.eventURL = info.url;
+  this.image = info.images.url;
+  this.date = info.dates.start.localDate;
+  this.startTime = info.dates.start.localTime;
+}
+
+function loadIndex(request, response) {
+  response.render('index');
+  app.use(express.static('./public'));
 }
 
 // Searches route handler
@@ -40,9 +60,18 @@ function loadSimilarArtists(request, response) {
   let url = `https://tastedive.com/api/similar?q=${request.body.search}&type=music&limit=9&k=${process.env.TASTE_DIVE_API_KEY}`
 
   superagent.get(url)
-    .then(apiResponse => apiResponse.body.items.map(bookResult => new Band(bookResult.volumeInfo)))
+    .then(results => results.body.Similar.Results.map(bandResults => new Band(bandResults)))
     .then(results => {
-      response.render('pages/searches/show', { searchesResults: results });
+      response.render('pages/searches/show', { searchResults: results });
     })
 }
+// Events route handler
+function loadEvents(request, response){
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?classifficationName=music&postalCode=98121&keyword=${this.bandname}&apikey=${process.env.TICKETMASTER_API_KEY}`
 
+  superagent.get(url)
+    .then(results => results.body._embedded.events.map(eventResults => new Event(eventResults)))
+    .then(results => {
+      response.render('pages/searches/show',{searchResults: results})
+    })
+}
