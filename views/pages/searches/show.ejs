@@ -11,11 +11,12 @@
 
     <main>
           <% searchResults.forEach(band =>{ %>
-            <ul id="bands">
-              <li><button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>"><%= band.bandname %></a></button></li>
-              <li><%= band.description %></li>
+            <div id="bands-results">
+              <h3><%= band.bandname %></h3>
+              <p id="description"><%= band.description %></p>
               <iframe width="560" height="315" src="<%= band.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </ul>
+              <button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>">See Upcoming Events</a></button>
+            </div>
 
           <% }) %> 
           

@@ -1,5 +1,9 @@
-h1{
-
+h2{
+  color: white;
+  text-shadow: 3px 3px #222;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 200px;
 }
 
 /*-------INDEX PAGE-------*/
@@ -8,25 +12,37 @@ input[type="text"] {
     text-align:center;
 }
 
+button:hover{
+  background-color: #564F6F;
+}
+
 #search-form{
-    width: 50%;
-    margin: 200px auto;
+    width: 90%;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #search-form > * {
     margin: 10px;
     height: 50px;
     font-size: 20px;
+    border-radius: 50px;
 }
 
-#search-form > input {
-    border-radius: 5px;
+#search-form button{
+  width: 25%;
+  min-width: 150px;
+}
+
+#search-form input{
+  width: 50%;
+  min-width: 300px;
 }
 
 .icon{
-  height:1.5rem;
+  height:2rem;
   filter: invert(100%);
 }
 
@@ -57,7 +73,46 @@ h1{
   width: 70vw;
   margin: 2rem 0;
 }
-d
+
+/*------SEARCHES/SHOW PAGE------*/
+#bands-results{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  width: 60%;
+  background-color: #9cb8b3;
+  box-shadow: 3px 3px 10px #222;
+  padding: 15px;
+}
+
+#band-results > *{
+  margin: 10px;
+}
+
+#bands-results p{
+  width: 75%;
+  overflow: scroll;
+  max-height: 300px;
+  margin: 10px;
+  background-color: #E7E3D4;
+  box-shadow: 3px 3px 10px #222;
+  padding: 5px;
+}
+
+#bands-results button{
+  width: 30%;
+  height: 50px;
+  font-size: 1em;
+}
+
+h3{
+  font-size: 2em;
+  margin: 10px auto;
+}
+
+
+
 /*------EVENTS/SHOW PAGE--------*/
 
 #band-events{
@@ -67,28 +122,34 @@ d
   align-items: center;
   padding: 10px;
   margin: 10px auto 5px auto;
-  background-color: grey;
-  border: solid 3px red;
+  /* background-color: grey;
+  border: solid 3px red; */
   overflow: scroll;
 }
 
 #band-events img {
-  width: 60%;
+  width: 100%;
   display: block;
   margin: 20px auto 20px auto;
+  box-shadow: 3px 3px 10px #222;
 }
 
 #single-event{
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
   margin: 10px auto 10px auto;
-  background-color: grey;
+  background-color: #9cb8b3;
+  box-shadow: 3px 3px 10px #222;
 }
 
 #single-event > * {
   margin: 5px auto;
   font-size: 16px;
+}
+
+#single-event button{
+  width:40%;
 }

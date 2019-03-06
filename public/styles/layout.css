@@ -5,6 +5,28 @@
   width: 100vw;
   height: 95vh;
 }
-@media screen and (max-width: 736px){
+
+  
+@media screen and (min-width: 769) and (max-width:1880){
+  /* h2{
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    text-shadow: 3px 3px #222;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 200px;
+  } */
     
+}
+
+@media screen and (max-width: 768px){
+  h2{
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    text-shadow: 3px 3px #222;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 200px;
+  }
+
 }

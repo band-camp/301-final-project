@@ -1,14 +1,14 @@
+*{
+    font-family: 'Fjalla One', sans-serif;
+}
+
 body{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    background-color: slategray;
     position: relative;
     min-height: 100vh;
-}
-
-main{
-    border: 3px green solid;
+    background-color: #564F6F;
 }
 
 header{
@@ -25,7 +25,6 @@ footer{
     height: 2rem;
     position: relative;
     bottom: 0px;
-    /* align-self: flex-end; */
     flex-direction: column;
     align-items: center;
     background-color: black;
