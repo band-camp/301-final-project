@@ -34,8 +34,10 @@ app.post('/search-results', loadSimilarArtists);
 //Load events route
 app.get('/button', loadEvents);
 
-
 app.get('/bands/:bandname', loadEvents);
+
+//Add event to Database
+app.post('/add', addToMyEvents);
 
 //Server listening to requests on PORT
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
@@ -84,3 +86,16 @@ function loadEvents(request, response){
       response.render('pages/events/show',{eventResults: results})
     })
 }
+
+function addToMyEvents(request, response) {
+  console.log(request.body);
+  let {eventName, eventURL, image, date, startTime, venue} = request.body;
+
+  let SQL = 'INSERT INTO events(event_name, event_url, image, date, start_time, venue) VALUES ($1, $2, $3, $4, $5, $6);';
+  let values = [eventName, eventURL, image, date, startTime, venue];
+
+  return client.query(SQL, values)
+    .then(response.redirect('/'))
+    // .catch(err => handleError(err, response));
+}
+
