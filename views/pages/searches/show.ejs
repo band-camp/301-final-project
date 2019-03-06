@@ -9,8 +9,6 @@
     </header>
 
     <main>
-
-        <div>
           <% searchResults.forEach(band =>{ %>
             <ul id="bands">
               <li><button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>"><%= band.bandname %></a></button></li>
@@ -18,9 +16,8 @@
               <iframe width="560" height="315" src="<%= band.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </ul>
 
-          <% }) %>  
-        </div>
-
+          <% }) %> 
+          
     </main>
 
     <footer>

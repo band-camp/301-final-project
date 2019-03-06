@@ -12,15 +12,16 @@
 
         <div>
           <% eventResults.forEach(event =>{ %>
-            <ul id="bands">
+            <ul id="band-events">
               <div id="image">
                 <img src="<%= event.image %>">
               </div>
               <li id="eventName"><%= event.eventName %></li>
               <li id="venue"><%= event.venue %></li>
-              <li id="eventURL"><%= event.eventURL %></li>
-              <li id="date"><%= event.date %></li>
-              <li id="time"><%= event.startTime %></li>
+              <li id="date">Date: <%= event.date %></li>
+              <li id="time">Doors: <%= event.startTime %></li>
+              <li id="eventURL"><a href=<%= event.eventURL %>>Buy Tickets</a></li>
+              <button id="add-to-calendar">Add to My Events</button>
             </ul>
 
           <% }) %>  
