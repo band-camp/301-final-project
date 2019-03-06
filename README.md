@@ -22,7 +22,7 @@ Javascript, HTML, CSS, Express.js, Postgresql, Superagent
 #Versions and corresponding features
 
 ##2.0.x
-  3-5-2018 - Feature 1: Design Mobile Layout of pages
+  3-5-2018 - Feature 1: Design Mobile Layout of Pages
   3-5-2018 - Feature 2: Link TasteDive API to TicketMaster API
   3-5-2018 - Feature 3: Render Ticketmaster Results
   3-5-2018 - Feature 4: SQL Database
