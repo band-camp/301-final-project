@@ -92,3 +92,18 @@ d
   margin: 5px auto;
   font-size: 16px;
 }
+
+#bands{
+  width: 60%;
+  margin: 10px auto;
+  background-color: grey;
+}
+
+#bands iframe{
+  margin: 10px 0;
+  width: 100%;
+}
+
+.description{
+  border: inset rgb(53, 51, 51) 2px;
+}

@@ -13,7 +13,7 @@
           <% searchResults.forEach(band =>{ %>
             <ul id="bands">
               <li><button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>"><%= band.bandname %></a></button></li>
-              <li><%= band.description %></li>
+              <li class="description"><%= band.description %></li>
               <iframe width="560" height="315" src="<%= band.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </ul>
 
