@@ -53,6 +53,8 @@ app.get('/saved', getEvents);
 //Add event to Database
 app.post('/add', addToMyEvents);
 
+//Delete event from Database
+app.post('/delete/:event_id', deleteEvent);
 
 //Server listening to requests on PORT
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
@@ -128,4 +130,12 @@ function addToMyEvents(request, response) {
 }
 
 
+function deleteEvent(request, response){
+  let SQL = `DELETE FROM events WHERE id=$1;`;
+  let values = [request.params.event_id];
 
+  client.query(SQL, values)
+    .then(response.redirect('/saved'));
+    // .catch(err => handleError(err, response));
+
+}
