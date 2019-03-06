@@ -33,6 +33,7 @@
                   <input type="text" name="startTime" value="<%= event.startTime%>" placeholder="<%= event.startTime%>" hidden>
                   <input type="text" name="venue" value="<%= event.venue%>" placeholder="<%= event.venue%>" hidden>
                   <button id="add-to-calendar">Add to My Events</button>
+                  <button id="add-to-calendar2" onclick='deleteEvent("<%= event.date %>")'>Delete from My Events</button>
                 </fieldset>
               </form>
             </div> 
