@@ -5,6 +5,7 @@ const express = require('express');
 const superagent = require('superagent');
 const ejs = require('ejs');
 const pg = require('pg');
+const methodOverride = require('method-override');
 
 // Environment Variables
 require('dotenv').config();
@@ -25,6 +26,16 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 
+// Middleware to handle PUT and DELETE
+app.use(methodOverride((request, response) => {
+  if (request.body && typeof request.body === 'object' && '_method' in request.body) {
+    // look in urlencoded POST bodies and delete it
+    let method = request.body._method;
+    delete request.body._method;
+    return method;
+  }
+}))
+
 //load index
 app.get('/', loadIndex);
 
@@ -36,8 +47,12 @@ app.get('/button', loadEvents);
 
 app.get('/bands/:bandname', loadEvents);
 
+//show saved events
+app.get('/saved', getEvents);
+
 //Add event to Database
 app.post('/add', addToMyEvents);
+
 
 //Server listening to requests on PORT
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
@@ -90,6 +105,16 @@ function loadEvents(request, response){
     })
 }
 
+function getEvents(request, response ) {
+  console.log(1);
+  const SQL =`SELECT * FROM events`;
+  console.log(SQL);
+  return client.query(SQL)
+    .then(result => {
+      response.render('pages/events/saved', {header:`My events(${result.rows.length})`, eventResults: result.rows});
+    })
+}
+
 function addToMyEvents(request, response) {
   console.log(request.body);
   let {eventName, eventURL, image, date, startTime, venue} = request.body;
@@ -101,4 +126,6 @@ function addToMyEvents(request, response) {
     .then(response.redirect('pages/events/saved'))
     // .catch(err => handleError(err, response));
 }
+
+
 
