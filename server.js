@@ -50,6 +50,8 @@ app.get('*', (request, response) => response.status(404).render('pages/error'));
 
 function Band(info){
   this.bandname = info.Name;
+  this.description = info.wTeaser;
+  this.video = info.yUrl;
 }
 
 function Event(info){
@@ -68,10 +70,11 @@ function loadIndex(request, response) {
 
 // Searches route handler
 function loadSimilarArtists(request, response) {
-  let url = `https://tastedive.com/api/similar?q=${request.body.search}&type=music&limit=9&k=${process.env.TASTE_DIVE_API_KEY}`
+  let url = `https://tastedive.com/api/similar?q=${request.body.search}&type=music&limit=20&info=1&k=${process.env.TASTE_DIVE_API_KEY}`
 
   superagent.get(url)
     .then(results => results.body.Similar.Results.map(bandResults => new Band(bandResults)))
+    // .then(results => console.log(results))
     .then(results => {
       response.render('pages/searches/show', { searchResults: results });
     })
