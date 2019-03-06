@@ -39,3 +39,19 @@ input[type="text"] {
   top: 0px;
   margin-bottom: 0px;
 }
+
+header p{
+  float:right;
+}
+
+h1{
+  font-size: 1.5rem;
+  width: 70vw;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#error{
+  width: 70vw;
+  margin: 2rem 0;
+}

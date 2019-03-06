@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('../../partials/head') %>
-</head>
-<body>
-    <header>
-        <%- include('../../partials/header') %>
-    </header>
+  <head>
+      <%- include('../../partials/head') %>
+  </head>
+  <body>
+      <header>
+          <%- include('../../partials/header') %>
+      </header>
 
-    <main>
+      <main>
 
-        <div>
-          <% searchResults.forEach(band =>{ %>
-            <ul id="bands">
-              <li><button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>"><%= band.bandname %></a></button>
-                
-              </li>
-                <ul id="events">
-                  <li> </li>
-                </ul>
-            </ul>
+          <div>
+            <% searchResults.forEach(band =>{ %>
+              <ul id="bands">
+                <li><button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>"><%= band.bandname %></a></button>
+                  
+                </li>
+                  <ul id="events">
+                    <li> </li>
+                  </ul>
+              </ul>
 
-          <% }) %>  
-        </div>
+            <% }) %>  
+          </div>
 
-    </main>
+      </main>
 
-    <footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script> 
-          $('.band-item').on('click', function() {
-            console.log(this.id);
-          });
-        </script>
-    </footer>
-    
-</body>
+      <footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+          <script> 
+            $('.band-item').on('click', function() {
+              console.log(this.id);
+            });
+          </script>
+      </footer>
+      
+  </body>
 </html>
