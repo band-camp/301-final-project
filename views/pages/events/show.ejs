@@ -10,12 +10,11 @@
 
     <main>
 
-        <div>
+        <div id="band-events">
+          <img src=<%= eventResults[0].image %>>
           <% eventResults.forEach(event =>{ %>
-            <ul id="band-events">
-              <div id="image">
-                <img src="<%= event.image %>">
-              </div>
+
+            <ul id="single-event">
               <li id="eventName"><%= event.eventName %></li>
               <li id="venue"><%= event.venue %></li>
               <li id="date">Date: <%= event.date %></li>
