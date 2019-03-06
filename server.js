@@ -98,7 +98,7 @@ function addToMyEvents(request, response) {
   let values = [eventName, eventURL, image, date, startTime, venue];
 
   return client.query(SQL, values)
-    .then(response.redirect('/'))
+    .then(response.redirect('pages/events/saved'))
     // .catch(err => handleError(err, response));
 }
 
