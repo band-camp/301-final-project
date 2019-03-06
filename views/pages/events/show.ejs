@@ -10,20 +10,19 @@
 
     <main>
 
-        <div>
+        <div id="band-events">
+          <img src=<%= eventResults[0].image %>>
           <% eventResults.forEach(event =>{ %>
-            <ul id="band-events">
-              <div id="image">
-                <img src="<%= event.image %>">
-              </div>
+
+            <ul id="single-event">
               <li id="eventName"><%= event.eventName %></li>
               <li id="venue"><%= event.venue %></li>
               <li id="date">Date: <%= event.date %></li>
               <li id="time">Doors: <%= event.startTime %></li>
-              <li id="eventURL"><a href=<%= event.eventURL %>>Buy Tickets</a></li>
-              
+              <button id="eventURL"><a href=<%= event.eventURL %>>Buy Tickets</a></button>
+              <button id="add-to-calendar">Add to My Events</button>
             </ul>
-            <div>
+        <div>
               <form action="/add" method="post">
                 <fieldset>
                   <input type="text" name="eventName" value="<%= event.eventName%>" placeholder="<%= event.eventName%>" hidden/>
@@ -33,7 +32,6 @@
                   <input type="text" name="startTime" value="<%= event.startTime%>" placeholder="<%= event.startTime%>" hidden>
                   <input type="text" name="venue" value="<%= event.venue%>" placeholder="<%= event.venue%>" hidden>
                   <button id="add-to-calendar">Add to My Events</button>
-                  <button id="add-to-calendar2" onclick='deleteEvent("<%= event.date %>")'>Delete from My Events</button>
                 </fieldset>
               </form>
             </div> 
