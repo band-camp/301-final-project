@@ -8,29 +8,56 @@
           <%- include('../partials/header') %>
       </header>
       
-      <main  >
+      <main>
         <div class="small-head" > 
           <img src="/images/aaron.png" class="member" id="Aaron">
-          <p class="introduction" id="aaron-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis magnam in velit incidunt commodi eligendi at quos, recusandae perferendis quaerat odio labore. Aut corporis suscipit beatae ut at hic.</p>
+          <p class="introduction" id="aaron-text">
+              <span id="aaron-name" class="member-name">Aaron Ferris</span>
+              Born in Seattle, Washington I grew up with a love for everything music. I was raised on everything from Bonnie Raitt to Louis Jordan to Pink Floyd. I can play a decent jazz piano and I sing a mean Prince on karaoke night. 
+              My favorite singer is Bobby McFerrin, but my tastes are wide and varied. I am a javascript developer with a background in Leadership, Customer Experience and Mechanical Engineering, and hope to work my way into a user experience developer role.
+          </p>
         </div>
         <div class="small-head">
           <img src="/images/chris.png"  class="member"  id="Chris">
-          <p class="introduction" id="chris-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo consequatur aliquid eveniet incidunt iure nesciunt pariatur exercitationem consectetur rem mollitia, nam eaque unde facilis autem obcaecati dolore veniam fuga.</p>
+          <p class="introduction" id="chris-text">
+            <span id="chris-name" class="member-name">Chris Morton</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo consequatur aliquid eveniet incidunt iure nesciunt pariatur exercitationem consectetur rem mollitia, nam eaque unde facilis autem obcaecati dolore veniam fuga.
+          </p>
         </div>
         <div class="small-head" >
           <img src="/images/cory.png" class="member" id="Cory">
           <p class="introduction" id="cory-text">
+            <span id="cory-name" class="member-name">Cory Henderson</span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sunt. Ea enim quidem quod corrupti repudiandae recusandae sit. Illum accusamus amet ducimus nihil deleniti culpa rem veritatis perferendis voluptas suscipit.
           </p>
         </div>
         <div class="small-head" >
           <img src="/images/vanessa.png" class="member" id="Vanessa">  
-          <p class="introduction" id="vanessa-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere possimus unde necessitatibus sunt ut. Illum quis, voluptatem ipsa nam soluta esse a aliquam, dolor at laudantium aperiam! Molestiae, debitis asperiores.</p>
+          <p class="introduction" id="vanessa-text">
+            <span id="vanessa-name" class="member-name">Vanessa Wei</span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere possimus unde necessitatibus sunt ut. Illum quis, voluptatem ipsa nam soluta esse a aliquam, dolor at laudantium aperiam! Molestiae, debitis asperiores.
+          </p>
         </div>
          
       </main>
-      <!-- <footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script>
+        console.log($("#aaron-text"));
+        $("#Aaron").on("click",function(){
+          $("#aaron-text").toggle();
+        });
+        $("#Cory").on("click",function(){
+          $("#cory-text").toggle();
+        });
+        $("#Chris").on("click",function(){
+          $("#chris-text").toggle();
+        });
+        $("#Vanessa").on("click",function(){
+          $("#vanessa-text").toggle();
+        }); 
+      </script>
+      <footer>
         <%- include('../partials/footer') %>
-      </footer> -->
+      </footer>
   </body>
 </html>
