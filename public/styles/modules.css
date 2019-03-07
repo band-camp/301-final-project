@@ -111,6 +111,15 @@ h3{
   margin: 10px auto;
 }
 
+.events-list{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+.events-list > * {
+  margin: 5px;
+}
 
 
 /*------EVENTS/SHOW PAGE--------*/
