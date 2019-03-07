@@ -37,7 +37,6 @@ h2{
   text-shadow: .05em .05em #222;
   font-size: 3em;
   text-align: center;
-  margin-top: 17%;
 }
 
 #vid{
@@ -64,18 +63,17 @@ input{
   color: #474b4f;
 }
 #search-form{
-    width: 90%;
-    margin: 5% auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #search-form > * {
-    margin: 4%;
-    height: 2.5em;
-    font-size: 1.250em;
-    border-radius: 3.125em;
+  margin: 5% auto;
+  height: 2.5em;
+  font-size: 1.250em;
+  border-radius: 3.125em;
 }
 
 #search-form button{
@@ -124,11 +122,34 @@ h1{
 
 #bands-results p{
   width: 90%;
-  overflow: scroll;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   max-height: 15em;
   margin: .5em;
   padding: .5em;
-  background-color: #E7E3D4;
 }
 
 #bands-results button{
