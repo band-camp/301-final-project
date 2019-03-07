@@ -58,12 +58,19 @@ app.post('/add', addToMyEvents);
 //Delete event from Database
 app.post('/delete/:event_id', deleteEvent);
 
+app.get('/about', aboutUs) 
+
+
 //Server listening to requests on PORT
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
 //Error handler
 function handleError(error, response){
   response.render('pages/error');
+}
+
+function aboutUs(request, response) {
+  response.render('pages/about');
 }
 // Catch-all route that renders the error page
 app.get('*', (request, response) => response.status(404).render('pages/error'));
