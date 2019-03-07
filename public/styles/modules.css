@@ -224,6 +224,15 @@ iframe{
 
 
 /*------About Us PAGE--------*/
+#team-name{
+  font-family: 'Gloria Hallelujah', cursive;
+  text-shadow: 10px 10px #8a28e2;
+  left:40vw;
+  bottom:7vw;
+  font-size: 3.5em;
+  position: absolute;
+}
+
 .member{
   width: 12em;
   height: 15em;
