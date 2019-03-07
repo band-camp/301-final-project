@@ -14,8 +14,13 @@
             <div id="bands-results">
               <h3><%= band.bandname %></h3>
               <p id="description"><%= band.description %></p>
-              <iframe src="<%= band.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <button id= "<%= band.bandname %>" class="band-item"><a href="/bands/<%= band.bandname %>">See Upcoming Events</a></button>
+              <iframe width="560" height="315" src="<%= band.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <button id="events-button" class="<%= band.bandname %>">See Upcoming Events</button>
+
+              <ul class="events-list" id="<%= band.bandname.replace(/\s/g, '') %>">
+
+              </ul>
             </div>
 
           <% }) %> 
@@ -24,11 +29,12 @@
 
     <footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script> 
+        <script src="app.js"></script>
+        <!-- <script> 
           $('.band-item').on('click', function() {
             console.log(this.id);
           });
-        </script>
+        </script> -->
     </footer>
     
 </body>

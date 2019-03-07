@@ -138,6 +138,16 @@ h3{
   margin: .5em auto;
 }
 
+.events-list{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+.events-list > * {
+  margin: 5px;
+}
+
 iframe{
   width:90%;
   height:55vw;
