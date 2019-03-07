@@ -10,11 +10,11 @@
       <main>
           <div id="band-events">
           <% eventResults.forEach(event =>{ %>        
-          
+            <div id="single-event">
               <img src=<%= event.image %>>
               
     
-                <ul id="single-event">
+                <ul>
                   <li id="eventName"><%= event.eventName %></li>
                   <li id="venue"><%= event.venue %></li>
                   <li id="date">Date: <%= event.date %></li>
@@ -24,7 +24,7 @@
                     <button id="remove">Remove from My Events</button>
                   </form>
                 </ul>
-            <div>
+              </div>
               
             
             <% }) %>
