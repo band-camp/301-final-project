@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="index">
   <head>
       <%- include('partials/head') %>
   </head>
@@ -9,7 +9,7 @@
       </header>
 
       <main id="indexmain">
-          <video autoplay muted loop id="vid"><source src="images/CROWD_JUMPS_LIGHTS_PULSE.mov"  type="video/mp4"></video>
+          <video autoplay muted loop id="vid"><source src="/images/CROWD_JUMPS_LIGHTS_PULSE.mov"  type="video/mp4"></video>
             <h2>Join the Band Wagon</h2>
             <div id="band-search">
               <form id="search-form" action="/search-results" method="post">
@@ -20,6 +20,10 @@
       </main>
       <footer>
         <%- include('partials/footer') %>
+        <!-- <script>
+            const vid= document.getElementById("vid");
+            vid.playbackRate =.75;
+        </script> -->
       </footer>
   </body>
 </html>

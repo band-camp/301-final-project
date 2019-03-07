@@ -45,7 +45,9 @@ app.post('/search-results', loadSimilarArtists);
 //Load events route
 app.get('/button', loadEvents);
 
-app.get('/bands/:bandname', loadEvents);
+// app.get('/bands/:bandname', loadEvents);
+app.post('/bands/:bandname', loadSingleEvent);
+app.get('/bandevents/:bandname', loadBandEvents);
 
 //show saved events
 app.get('/saved', getEvents);
@@ -117,8 +119,7 @@ function loadEvents(request, response){
     .then(results => {
       response.render('pages/events/show',{eventResults: results})
     })
-    .catch(err => handleError(err, response));
-
+    .catch(console.error('No upcoming Events'));
 }
 
 function getEvents(request, response ) {
@@ -144,7 +145,23 @@ function addToMyEvents(request, response) {
     .catch(err => handleError(err, response));
 }
 
+function loadBandEvents(request, response){
+  console.log('LOAD BAND EVENTS');
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?classifficationName=music&keyword=${request.params.bandname}&apikey=${process.env.TICKETMASTER_API_KEY}`
 
+  superagent.get(url)
+    .then(results => {
+      const eventsSummary = results.body._embedded.events;
+      const eventObjects = eventsSummary.map(event => new Event(event));
+      response.send(eventObjects);
+    })
+    .catch(err=>console.error(err));
+}
+
+function loadSingleEvent(request, response){
+  console.log(request.body);
+  response.render('pages/events/show', {eventResults: request.body});
+}
 function deleteEvent(request, response){
   let SQL = `DELETE FROM events WHERE id=$1;`;
   let values = [request.params.event_id];
