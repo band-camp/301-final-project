@@ -153,3 +153,69 @@ h3{
 #single-event button{
   width:40%;
 }
+
+
+
+/*------About Us PAGE--------*/
+.member{
+  width: 12em;
+  height: 15em;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+.member:hover {
+  transform: scale(1.4); 
+}
+
+.small-head {
+  z-index: 9;
+  
+}
+
+#background-band {
+  position: relative;
+  background-image:  url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center top; 
+}
+
+.introduction {
+  color: white;
+  width: 150px;
+  height:200px;
+  font-size: 0.75em;
+  background-color: #222629;
+}
+
+#Cory {
+  position: absolute;
+  top: 11em;
+  left:4.5em;
+}
+
+#Aaron {
+  position: absolute;
+  top: 10em;
+  left: 17em;
+}
+
+#Chris {
+  position: absolute;
+  top: 12em;
+  left: 39em;
+}
+
+#Vanessa {
+  position: absolute;
+  top: 13em;
+  left: 28em;
+}
+
+#cory-text {
+  position: absolute;
+  top: 32em;
+  left: 8em;
+}
+
