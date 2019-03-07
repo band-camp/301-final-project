@@ -3,23 +3,13 @@
 #indexmain{
   position: relative;
   width: 100vw;
-  height: 95vh;
+  height: 90vh;
+}
+main{
+  min-height: 90vh
 }
 
-  
-@media screen and (min-width: 769) and (max-width:1880){
-  /* h2{
-    font-family: 'Fjalla One', sans-serif;
-    color: white;
-    text-shadow: 3px 3px #222;
-    font-size: 3em;
-    text-align: center;
-    margin-top: 200px;
-  } */
-    
-}
-
-@media screen and (max-width: 768px){
+/* @media screen and (min-width: 769) {
   h2{
     font-family: 'Fjalla One', sans-serif;
     color: white;
@@ -27,6 +17,6 @@
     font-size: 3em;
     text-align: center;
     margin-top: 200px;
-  }
-
-}
+  }  
+    
+}*/ 
