@@ -1,5 +1,6 @@
 *{
     font-family: 'Fjalla One', sans-serif;
+    color: #f9f9f9; 
 }
 /* minimum size for the body is the full view. The footer and the header will not show up smaller */
 body{
@@ -8,7 +9,7 @@ body{
     width: 100vw;
     position: relative;
     min-height: 100vh;
-    background-color: #564F6F;
+    background-color: #222629;
 }
 
 header{
