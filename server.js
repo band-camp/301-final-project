@@ -55,15 +55,21 @@ app.get('/saved', getEvents);
 //Add event to Database
 app.post('/add', addToMyEvents);
 
+//Delete event from Database
+app.post('/delete/:event_id', deleteEvent);
 
 //Server listening to requests on PORT
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
-
-//Ticketmaster Route
-
+//Error handler
+function handleError(error, response){
+  response.render('pages/error');
+}
 // Catch-all route that renders the error page
 app.get('*', (request, response) => response.status(404).render('pages/error'));
+
+
+//Constructor Functions
 
 function Band(info){
   this.bandname = info.Name;
@@ -95,6 +101,7 @@ function loadSimilarArtists(request, response) {
     .then(results => {
       response.render('pages/searches/show', { searchResults: results });
     })
+    .catch(err => handleError(err, response));
 }
 // Events route handler
 function loadEvents(request, response){
@@ -114,8 +121,9 @@ function getEvents(request, response ) {
   console.log(SQL);
   return client.query(SQL)
     .then(result => {
-      response.render('pages/events/saved', {header:`My events(${result.rows.length})`, eventResults: result.rows});
+      response.render('pages/events/saved', {header:`My events(${result.rows.length})`, eventResults: result.rows})
     })
+    .catch(err => handleError(err, response));
 }
 
 function addToMyEvents(request, response) {
@@ -127,7 +135,7 @@ function addToMyEvents(request, response) {
 
   return client.query(SQL, values)
     .then(response.redirect('/saved'))
-    // .catch(err => handleError(err, response));
+    .catch(err => handleError(err, response));
 }
 
 function loadBandEvents(request, response){
@@ -147,4 +155,12 @@ function loadSingleEvent(request, response){
   console.log(request.body);
   response.render('pages/events/show', {eventResults: request.body});
 }
+function deleteEvent(request, response){
+  let SQL = `DELETE FROM events WHERE id=$1;`;
+  let values = [request.params.event_id];
 
+  client.query(SQL, values)
+    .then(response.redirect('/saved'))
+    .catch(err => handleError(err, response));
+
+}

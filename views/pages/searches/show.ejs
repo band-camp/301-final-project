@@ -18,7 +18,7 @@
 
               <button id="events-button" class="<%= band.bandname %>">See Upcoming Events</button>
 
-              <ul class="events-list" id="<%= band.bandname.slice(-3) %>">
+              <ul class="events-list" id="<%= band.bandname.replace(/\s/g, '') %>">
 
               </ul>
             </div>

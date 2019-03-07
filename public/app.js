@@ -2,7 +2,7 @@
 
 $('button').click(function() {
   let fullBandName = this.className;
-  let bandName = this.className.slice(-3);
+  let bandName = this.className.replace(/\s/g, '');
   $(`#${bandName}`).empty();
   $(`#${bandName}`).append('<li>No Upcoming Events!</li>');
   // AJAX request - get events data for artist
