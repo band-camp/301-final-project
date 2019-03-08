@@ -121,7 +121,7 @@ h1{
   align-items: center;
   margin: .5em auto;
   width: 87%;
-  max-width: 22em;  
+  max-width: 80%;  
   padding: .75em;
 }
 
@@ -136,10 +136,14 @@ h1{
 }
 
 #bands-results button{
-  width: 50%;
+  width: 80%;
   height: 2.5em;
   font-size: 1em;
   min-width: 9em;
+}
+
+#events-button{
+  width: 10%;
 }
 
 h3{
@@ -171,11 +175,12 @@ iframe{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: .5em auto .25em auto;
-  overflow: hidden;
+  margin: 4% auto .25em auto;
+  overflow: auto;
 }
 
 #band-events img {
+  
   width: 87%;
   display: block;
   margin: 1em auto;
@@ -197,11 +202,16 @@ iframe{
 }
 #single-event > * {
   margin: .5em auto;
-  font-size: .8em;
+  font-size: 1.5em;
 }
 
 #single-event button{
   padding: .5em 1em;
+}
+
+#add-to-calendar{
+  padding: .5em 1em;
+  font-size: 1.2em;
 }
 
 
@@ -329,13 +339,13 @@ a{
   }
   
   #bands-results p{
-    width: 60rem;
+    width: 100%;
     margin: .5em;
     padding: .5em;
   }
   
   #bands-results button{
-    width: 100%;
+    width: 20%;
     height: 2.5em;
     font-size: 1em;
   }
@@ -399,6 +409,10 @@ a{
   
   #single-event button{
     padding: .5em 1em;
+  }
+
+  #events-button{
+    width: 10%;
   }
   
   a{
