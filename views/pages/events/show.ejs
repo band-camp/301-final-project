@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/head') %>
+</head>
+<body>
+    <header>
+        <%- include('../../partials/header') %>
+    </header>
+
+    <main>
+
+        <div id="band-events">
+          
+            <img src=<%= eventResults.image %>>
+            <ul id="single-event">
+              <li id="eventName"><%= eventResults.eventName %></li>
+              <li id="venue" class="other"><%= eventResults.venue %></li>
+              <li id="date" class="other">Date: <%= eventResults.date %></li>
+              <li id="time" class="other">Doors: <%= eventResults.startTime %></li>
+              <li id="location" class="other"><%= eventResults.city %>, <%= eventResults.state %></li>
+              <button id="eventURL"><a href=<%= eventResults.eventURL %>>Buy Tickets</a></button>
+              
+            </ul>
+        <div>
+              <form action="/add" method="post">
+                <fieldset>
+                  <input type="text" name="eventName" value="<%= eventResults.eventName%>" placeholder="<%= eventResults.eventName%>" hidden/>
+                  <input type="text" name="eventURL" value="<%= eventResults.eventURLr%>" placeholder="<%= eventResults.eventURLr%>" hidden/>
+                  <input type="text" name="image" value="<%= eventResults.image%>" placeholder="<%= eventResults.image%>" hidden/>
+                  <input type="text" name="date" value="<%= eventResults.date%>" placeholder="<%= eventResults.date%>" hidden>
+                  <input type="text" name="startTime" value="<%= eventResults.startTime%>" placeholder="<%= eventResults.startTime%>" hidden>
+                  <input type="text" name="venue" value="<%= eventResults.venue%>" placeholder="<%= eventResults.venue%>" hidden>
+                  <input type="text" name="city" value="<%= eventResults.city%>" placeholder="<%= eventResults.city%>" hidden>
+                  <input type="text" name="state" value="<%= eventResults.state%>" placeholder="<%= eventResults.state%>" hidden>
+                  <button id="add-to-calendar">Add to My Events</button>
+                </fieldset>
+              </form>
+            </div> 
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('../../partials/footer') %>
+    </footer>
+    
+</body> 
+</html>

@@ -1,0 +1,612 @@
+/*-------HEADER-------*/
+nav div{
+  padding-top: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0em .25em 0em .25em;
+}
+.icon{
+  height:4vh;
+  filter: invert(100%);
+  margin: auto 1em;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0em 2em 0em 2em; 
+}
+nav span{
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+  color: white;
+
+}
+
+/*-------FOOTER-------*/
+
+footer p{
+  font-size:90%;
+}
+
+footer a{
+  font-size:90%;
+}
+
+/*-------INDEX PAGE-------*/
+
+#index{
+  height: 100%;
+  overflow: hidden;
+}
+input[type="text"] {
+    text-align:center;
+}
+
+h2{
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  text-shadow: .05em .05em #222;
+  font-size: 3em;
+  text-align: center;
+}
+
+#vid{
+  filter: invert(10%);
+  object-fit: cover;
+  align-self: center;
+  position:absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  margin-bottom: 0;
+}
+
+button{
+  color: #474b4f;
+}
+
+button:hover{
+  background-color: #564F6F;
+}
+
+input{
+  color: #474b4f;
+}
+#search-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-form > * {
+  margin: 5% auto;
+  height: 2.5em;
+  font-size: 1.250em;
+  border-radius: 3.125em;
+}
+
+#search-form button{
+  width: 3  0%;
+  min-width: 9.375em;
+}
+
+#search-form input{
+  width: 60%;
+  min-width: 15em;
+}
+
+
+/*------- ERROR PAGE --------*/
+
+
+h1{
+  font-size: 1.5em;
+  width: 70vw;
+  margin: 1em auto;
+  text-align: center;
+}
+/* Set breakpoint size to 60% */
+#error{
+  width:80%;
+  height: 80%;
+  object-fit: cover;
+  margin: 0 10%;
+}
+
+
+/*------SEARCHES/SHOW PAGE------*/
+#bands-results{
+  color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em auto;
+  width: 87%;
+  max-width: 80%;  
+  padding: .75em;
+  line-height: 1.4em;
+}
+
+#band-name {
+  text-shadow: 5px 5px  #8a28e2;
+}
+
+#description {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#bands-results > *{
+  margin: .5em;
+}
+
+#bands-results p{
+  width: 90%;
+  margin: .5em;
+  padding: .5em;
+}
+
+#events-button{
+  width: 80%;
+  height: 2.5em;
+  font-size: 1em;
+  min-width: 9em;
+}
+
+h3{
+  font-size: 2em;
+  margin: .5em auto;
+}
+
+.events-list{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+.events-list > * {
+  margin: 5px;
+}
+
+.event-name {
+  color: #8a28e2;
+  font-size: 1em;
+  margin: 0.5em;
+}
+
+.event-date {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.75em;
+}
+
+.choose-button {
+  width: 40%;
+  height: 1.5em;
+  font-size: 0.75em;
+}
+
+iframe{
+  width:90%;
+  height:55vw;
+  margin-bottom: 1em;
+}
+
+
+/*------EVENTS/SHOW PAGE--------*/
+
+#band-events{
+  color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4% auto .25em auto;
+  overflow: auto;
+}
+
+#band-events img {
+  width: 65%;
+  display: block;
+}
+
+#single-event{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .5em auto;
+  width: 87%;
+  padding: .75em;
+}
+
+#single-event ul{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#single-event > * {
+  margin: .5em auto;
+}
+
+#single-event button{
+  padding: .5em 1em;
+}
+
+#single-event > ul > li{
+  margin: 0.5em;
+}
+
+#eventName {
+  margin:0.75em;
+  text-shadow: 3px 3px #8a28e2;
+  font-size: 1.5em;
+}
+
+.other {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1em;
+}
+
+#eventURL{
+  width: 40%;
+  height: 2.5em;
+  font-size: 1.2em;
+}
+
+#eventURL > a{
+  text-decoration: none;
+}
+
+#add-to-calendar{
+  
+  height: 2.5em;
+  font-size: 1em;
+}
+
+#add-to-calendar{
+  padding: .5em 1em;
+  font-size: 1.2em;
+}
+
+#saved-url {
+  height: 2.5em;
+  font-size: 0.75em;
+}
+
+#saved-url > a{
+  text-decoration: none;
+}
+
+
+
+
+/*------About Us PAGE--------*/
+#aboutmain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#background{
+  width: 100%;
+  z-index: -5;
+}
+
+#team-name{
+  font-family: 'Gloria Hallelujah', cursive;
+  text-shadow: 10px 10px #8a28e2;
+  left:22vw;
+  bottom: 2em;
+  font-size: 3.5em;
+  position: absolute;
+  width: 5em;
+  text-align: left;
+}
+
+
+.member{
+  width:20vw;
+  transition: all .1s ease-in-out;
+  position: absolute;
+}
+
+.member:hover {
+  transform: scale(1.4); 
+}
+
+.small-head {
+  z-index: 9; 
+}
+
+#second{
+  float: right;
+}
+
+.introduction {
+  color: white;
+  width:23vw;
+  font-size: 1vw;
+  font-family: 'Courier New', Courier, monospace;
+  display: none;
+  line-height: 1.5em;
+  background-color: rgba(71, 75, 79, .7);
+  z-index: -1;
+}
+
+#Cory {
+  position: absolute;
+  top: 24vw;
+  left: 5vw
+}
+
+#Aaron {
+  position: absolute;
+  top: 21vw;
+  left: 29vw;
+}
+
+#Vanessa {
+  position: absolute;
+  top: 26.5vw;
+  left: 50vw;
+}
+
+#Chris {
+  position: absolute;
+  top: 25vw;
+  left: 72vw;
+}
+
+
+
+#cory-text {
+  position: absolute;
+  left: 2%;
+}
+
+#aaron-text {
+  position: absolute;
+  left: 26%;
+  
+}
+
+#vanessa-text {
+  position: absolute;
+  right: 26%;
+}
+
+#chris-text {
+  position: absolute;
+  top: 2vh;
+  right: 2%;
+}
+
+ .member-name {
+  display: block;
+  font-size: 2em;
+  color: #8a28e2;
+  margin:5px;
+} 
+
+a{
+  color: #474b4f;
+}
+
+@media screen and (min-width:769px){
+
+  /* -------band results */
+
+  #bands-results{
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5em auto;
+    width: 100%;
+    padding: .75em;
+  }
+  
+  #band-results > *{
+    margin: .5em;
+  }
+  
+  #bands-results p{
+    width: 100%;
+    margin: .5em;
+    padding: .5em;
+  }
+  
+  #events-button{
+    width: 20%;
+    height: 2.5em;
+    font-size: 1em;
+  }
+  
+  h3{
+    font-size: 2em;
+    margin: .5em auto;
+  }
+  
+  .events-list{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .events-list > * {
+    margin: 5px;
+  }
+
+  .event-name {
+    color: #8a28e2;
+    font-size: 1em;
+    margin: 0.5em;
+  }
+
+  .event-date {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.75em;
+  }
+
+  .choose-button {
+    width: 10%;
+    height: 1.5em;
+    font-size: 0.75em;
+  }
+  
+  iframe{
+    width: 40rem;
+    height: 20rem;
+    margin-bottom: 1em;
+  }
+
+ /* -----events page------*/
+  #band-events img {
+    width: 40%;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  #band-events{
+    color: #f9f9f9;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5em auto .5em auto;
+    overflow: hidden;
+  }
+  
+  #single-event{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5em auto;
+    width: 87%;
+    padding: .75em;
+  }
+  
+  #single-event *{
+    margin: .5em;
+  }
+
+  #single-event ul{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #single-event > * {
+    margin: 0.5em auto;
+  }
+
+  #remove {
+    margin:0.5em;
+  }
+
+  #eventName {
+    margin:0.75em;
+    text-shadow: 3px 3px #8a28e2;
+    font-size: 1.5em;
+  }
+
+  .other {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+  }
+
+  #eventURL{
+    text-decoration: none;
+    width: 15%;
+    height: 2.5em;
+    font-size: 1em;
+  }
+
+  #add-to-calendar{
+    
+    height: 2.5em;
+    font-size: 1em;
+  }
+  
+  #single-event button{
+    padding: .5em 1em;
+  }
+  
+  a{
+    color: #474b4f;
+  }
+
+  /*----About Us-----*/
+  #background{
+    width:60%
+  }
+
+  #team-name{
+    bottom: .25em;
+    left:40vw;
+  }
+
+  .member{
+    width:15vw; 
+  }
+  
+  .introduction{
+    font-size: .75vw;  
+    width: 18vw;
+  }
+
+  #Cory {
+    position: absolute;
+    top: 12vw;
+    left: 22vw
+  }
+  
+  #Aaron {
+    position: absolute;
+    top: 9vw;
+    left: 36vw;
+  }
+  
+  #Vanessa {
+    position: absolute;
+    top: 13.5vw;
+    left: 49vw;
+  }
+  
+  #Chris {
+    position: absolute;
+    top: 12vw;
+    left: 62vw;
+  }
+  
+  
+  
+  #cory-text {
+    position: absolute;
+    top: 3vh;
+    left:1vw;
+  }
+  
+  #aaron-text {
+    position: absolute;
+    top: 45vh;
+    left: 1vw;
+    
+  }
+  
+  #vanessa-text {
+    position: absolute;
+    top: 3vh;
+    right: 1vw;
+  }
+  
+  #chris-text {
+    position: absolute;
+    top: 45vh;
+    right: 1vw;
+  }
+}
+

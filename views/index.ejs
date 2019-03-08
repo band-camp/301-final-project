@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('partials/head') %>
-</head>
-<body>
-    <header>
-        <%- include('partials/header') %>
-    </header>
-
-    <main>
-
-        <div id="band-search">
-            <form action="/search-results" method="post">
-                <input type="text" name="search" placeholder="Enter a Band" required>
-                <button type="submit">Find Music!</button>
-            </form>
-        </div>
-
-    </main>
-
-    <footer>
+<html lang="en" id="index">
+  <head>
+      <%- include('partials/head') %>
+  </head>
+  <body>
+      <header>
+          <%- include('partials/header') %>
+      </header>
+      <video autoplay muted loop id="vid"><source src="/images/CROWD_JUMPS_LIGHTS_PULSE.mov"  type="video/mp4"></video>
+      <main id="indexmain">
+            <h2>B A N D W A G O N</h2>
+            <div id="band-search">
+              <form id="search-form" action="/search-results" method="post">
+                  <input type="text" name="search" placeholder="Search a Band" required>
+                  <button type="submit">Find Music!</button>
+              </form>
+          </div>
+      </main>
+      <footer>
         <%- include('partials/footer') %>
-    </footer>
-</body>
+      </footer>
+  </body>
 </html>

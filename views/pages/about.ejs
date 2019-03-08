@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+      <header>
+          <%- include('../partials/header') %>
+      </header>
+      
+      <main id="aboutmain">
+        <!-- <span id="team-name">BAND <span id="second">CAMP</span></span> -->
+        <img src="/images/background.jpg" id="background" alt="Background Image Beatles Abbey Road Album Cover">
+        <div class="small-head" > 
+          <img src="/images/aaron.png" class="member" id="Aaron">
+          <p class="introduction" id="aaron-text">
+              <span id="aaron-name" class="member-name">Aaron Ferris</span>
+              Born in Seattle, Washington I grew up with a love for everything music. I was raised on everything from Bonnie Raitt to Louis Jordan to Pink Floyd. I can play a decent jazz piano and I sing a mean Prince on karaoke night. 
+              My favorite singer is Bobby McFerrin, but my tastes are wide and varied. I am a javascript developer with a background in Leadership, Customer Experience and Mechanical Engineering, and hope to work my way into a user experience developer role.
+          </p>
+        </div>
+        <div class="small-head">
+          <img src="/images/chris.png"  class="member"  id="Chris">
+          <p class="introduction" id="chris-text">
+            <span id="chris-name" class="member-name">Chris Morton</span>
+            Hi, Im Chris Morton I am a software developer living in Seattle with a background in special warfare and military intelligence. I moved here after spending the better part of a decade in the military working with the SEAL Teams on the west coast, and the Defense Intelligence Agency out of the US Embassy in Portugal. 
+            I have a passion for solving puzzles and problems, doing research, and making new things as well as extensive training in dynamic fast paced team environments and I hope to be able to apply all of this to my career in tech.
+          </p>
+        </div>
+        <div class="small-head" >
+          <img src="/images/cory.png" class="member" id="Cory">
+          <p class="introduction" id="cory-text">
+            <span id="cory-name" class="member-name">Cory Henderson</span>
+            Cory is a Seattle local who left behind a career in civil engineering in pursuit of a more fulfilling path in software development. When he's not in a classroom at Codefellows, he enjoys hanging out at the local climbing gym, sampling cold craft beverages, 
+            and exploring the mountains and roads of the Pacific Northwest on two wheels.
+          </p>
+        </div>
+        <div class="small-head" >
+          <img src="/images/vanessa.png" class="member" id="Vanessa">  
+          <p class="introduction" id="vanessa-text">
+            <span id="vanessa-name" class="member-name">Vanessa Wei</span>
+            Vanessa is a mother of two kids. She likes swimming, hiking, and traveling. She can sing and dance. She has 5 years of work experience as a consultant. There are 34 provinces in China and she has travelled to half of them on business. She enjoys coding and the people she codes with.
+          </p>
+        </div>
+         
+      </main>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script>
+        console.log($("#aaron-text"));
+        $("#Aaron").on("click",function(){
+          $("#aaron-text").toggle();
+        });
+        $("#Cory").on("click",function(){
+          $("#cory-text").toggle();
+        });
+        $("#Chris").on("click",function(){
+          $("#chris-text").toggle();
+        });
+        $("#Vanessa").on("click",function(){
+          $("#vanessa-text").toggle();
+        }); 
+      </script>
+      <footer>
+        <%- include('../partials/footer') %>
+      </footer>
+  </body>
+</html>

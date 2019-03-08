@@ -1,3 +1,66 @@
 *{
-    background-color: white;
+    font-family: 'Fjalla One', sans-serif;
+}
+/* minimum size for the body is the full view. The footer and the header will not show up smaller */
+body{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+    background-color: #222629;
+    padding: 0 0 7vh 0;
+}
+
+header{
+    width: 100vw;
+    height: 5%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+footer{
+    display: flex;
+    width: 100vw;
+    height: 7vh;
+    position: fixed;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: #f9f9f9;
+    z-index: 4;
+}
+
+@media screen and (min-width:769px){
+    header{
+        width: 100vw;
+        height: 8%;
+        background-color: black;
+        position: fixed;
+        top: 0;
+    }
+    body{
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        position: relative;
+        height: 100%;
+        background-color: #222629;
+    }
+    footer{
+        display: flex;
+        width: 100vw;
+        height: 7%;
+        position: fixed;
+        bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        color: white;
+    } 
 }

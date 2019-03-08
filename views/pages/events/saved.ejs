@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../../partials/head') %>
+  </head>
+  <body>
+      <header>
+          <%- include('../../partials/header') %>
+        </header>
+      <main>
+          <div id="band-events">
+          <% eventResults.forEach(event =>{ %>        
+            <div id="single-event">
+              <img src=<%= event.image %>>
+              
+    
+                <ul>
+                  <li id="eventName"><%= event.eventName %></li>
+                  <li id="venue"><%= event.venue %></li>
+                  <li id="date">Date: <%= event.date %></li>
+                  <li id="time">Doors: <%= event.startTime %></li>
+                  <button id="saved-url"><a href=<%= event.eventURL %>>Buy Tickets</a></button>
+                  <form action="<%= `/delete/${event.id}` %>" method="POST" id='delete'>
+                    <button id="remove">Remove from My Events</button>
+                  </form>
+                </ul>
+              </div>
+              
+            
+            <% }) %>
+          </div>         
+      </main>
+      <footer>
+        <%- include('../../partials/footer') %>
+      </footer>
+  </body>
+</html>
