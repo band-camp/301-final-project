@@ -20,6 +20,7 @@ $('button').click(function() {
         .append(`<li>${obj.eventName} </li>
         <li>${obj.date}</li>
         <li>${obj.city}, ${obj.state}</li>
+
         <form action="/bands/${fullBandName}" method="post">
         <fieldset>
           <input type="text" name="eventName" value="${obj.eventName}" hidden/>
