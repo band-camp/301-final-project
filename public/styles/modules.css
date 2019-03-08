@@ -5,18 +5,25 @@ nav div{
   display: flex;
   justify-content: space-between;
   align-content: center;
-  margin: 0em 2em 0em 2em;
+  margin: 0em .25em 0em .25em;
 }
 .icon{
   height:4vh;
   filter: invert(100%);
-  margin: auto .1;
+  margin: auto 1em;
 }
 nav{
   display: flex;
   justify-content: space-between;
   align-content: center;
-  margin: 0em 2em 0em 2em;
+  margin: 0em 2em 0em 2em; 
+}
+nav span{
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+  color: white;
+
 }
 
 /*-------FOOTER-------*/
