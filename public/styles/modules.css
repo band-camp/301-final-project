@@ -119,13 +119,22 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: .5em auto;
+  margin: 1em auto;
   width: 87%;
   max-width: 80%;  
   padding: .75em;
+  line-height: 1.4em;
 }
 
-#band-results > *{
+#band-name {
+  text-shadow: 5px 5px  #8a28e2;
+}
+
+#description {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#bands-results > *{
   margin: .5em;
 }
 
@@ -135,15 +144,15 @@ h1{
   padding: .5em;
 }
 
-#bands-results button{
+/* #bands-results button{
+  
+} */
+
+#events-button{
   width: 80%;
   height: 2.5em;
   font-size: 1em;
   min-width: 9em;
-}
-
-#events-button{
-  width: 10%;
 }
 
 h3{
@@ -159,6 +168,23 @@ h3{
 
 .events-list > * {
   margin: 5px;
+}
+
+.event-name {
+  color: #8a28e2;
+  font-size: 1em;
+  margin: 0.5em;
+}
+
+.event-date {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.75em;
+}
+
+.choose-button {
+  width: 40%;
+  height: 1.5em;
+  font-size: 0.75em;
 }
 
 iframe{
@@ -202,17 +228,57 @@ iframe{
 }
 #single-event > * {
   margin: .5em auto;
-  font-size: 1.5em;
 }
 
 #single-event button{
   padding: .5em 1em;
 }
 
+#single-event > ul > li{
+  margin: 0.5em;
+}
+
+#eventName {
+  margin:0.75em;
+  text-shadow: 3px 3px #8a28e2;
+  font-size: 1.5em;
+}
+
+.other {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1em;
+}
+
+#eventURL{
+  width: 40%;
+  height: 2.5em;
+  font-size: 1.2em;
+}
+
+#eventURL > a{
+  text-decoration: none;
+}
+
+#add-to-calendar{
+  
+  height: 2.5em;
+  font-size: 1em;
+}
+
 #add-to-calendar{
   padding: .5em 1em;
   font-size: 1.2em;
 }
+
+#saved-url {
+  height: 2.5em;
+  font-size: 0.75em;
+}
+
+#saved-url > a{
+  text-decoration: none;
+}
+
 
 
 
@@ -353,7 +419,7 @@ a{
     padding: .5em;
   }
   
-  #bands-results button{
+  #events-button{
     width: 20%;
     height: 2.5em;
     font-size: 1em;
@@ -372,6 +438,23 @@ a{
   
   .events-list > * {
     margin: 5px;
+  }
+
+  .event-name {
+    color: #8a28e2;
+    font-size: 1em;
+    margin: 0.5em;
+  }
+
+  .event-date {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.75em;
+  }
+
+  .choose-button {
+    width: 10%;
+    height: 1.5em;
+    font-size: 0.75em;
   }
   
   iframe{
@@ -416,16 +499,39 @@ a{
     align-items: center;
   }
   #single-event > * {
-    margin: .5em auto;
-    font-size: .8em;
+    margin: 0.5em auto;
+  }
+
+  #remove {
+    margin:0.5em;
+  }
+
+  #eventName {
+    margin:0.75em;
+    text-shadow: 3px 3px #8a28e2;
+    font-size: 1.5em;
+  }
+
+  .other {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+  }
+
+  #eventURL{
+    text-decoration: none;
+    width: 15%;
+    height: 2.5em;
+    font-size: 1em;
+  }
+
+  #add-to-calendar{
+    
+    height: 2.5em;
+    font-size: 1em;
   }
   
   #single-event button{
     padding: .5em 1em;
-  }
-
-  #events-button{
-    width: 10%;
   }
   
   a{

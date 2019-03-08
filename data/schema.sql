@@ -7,5 +7,7 @@ CREATE TABLE IF NOT EXISTS events (
   image VARCHAR(255),
   date VARCHAR(255),
   start_time VARCHAR(255),
-  venue VARCHAR(255)
+  venue VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255)
 );

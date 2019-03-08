@@ -18,6 +18,7 @@
               <li id="venue"><%= eventResults.venue %></li>
               <li id="date">Date: <%= eventResults.date %></li>
               <li id="time">Doors: <%= eventResults.startTime %></li>
+              <li id="location"><%= eventResults.city %>, <%= eventResults.state %></li>
               <button id="eventURL"><a href=<%= eventResults.eventURL %>>Buy Tickets</a></button>
               
             </ul>
@@ -30,6 +31,8 @@
                   <input type="text" name="date" value="<%= eventResults.date%>" placeholder="<%= eventResults.date%>" hidden>
                   <input type="text" name="startTime" value="<%= eventResults.startTime%>" placeholder="<%= eventResults.startTime%>" hidden>
                   <input type="text" name="venue" value="<%= eventResults.venue%>" placeholder="<%= eventResults.venue%>" hidden>
+                  <input type="text" name="city" value="<%= eventResults.city%>" placeholder="<%= eventResults.city%>" hidden>
+                  <input type="text" name="state" value="<%= eventResults.state%>" placeholder="<%= eventResults.state%>" hidden>
                   <button id="add-to-calendar">Add to My Events</button>
                 </fieldset>
               </form>
