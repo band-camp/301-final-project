@@ -2,7 +2,7 @@
 
 $('button').click(function() {
   let fullBandName = this.className;
-  let bandName = this.className.replace(/\s/g, '');
+  let bandName = this.className.replace(/\s?\+?\!?\&?\'?/g, '');
   $(`#${bandName}`).empty();
   $(`#${bandName}`).append('<li>No Upcoming Events!</li>');
   // AJAX request - get events data for artist
@@ -19,6 +19,7 @@ $('button').click(function() {
       result.forEach(obj => $(`#${bandName}`)
         .append(`<li>${obj.eventName} </li>
         <li>${obj.date}</li>
+        <li>${obj.city}, ${obj.state}</li>
         <form action="/bands/${fullBandName}" method="post">
         <fieldset>
           <input type="text" name="eventName" value="${obj.eventName}" hidden/>
@@ -27,6 +28,8 @@ $('button').click(function() {
           <input type="text" name="date" value="${obj.date}" hidden>
           <input type="text" name="startTime" value="${obj.startTime}" hidden>
           <input type="text" name="venue" value="${obj.venue}" hidden>
+          <input type="text" name="city" value="${obj.city}" hidden>
+          <input type="text" name="state" value="${obj.state}" hidden>
           <button id="${obj.date}" type="submit">${'Event Details'}</button>
         </fieldset>
       </form>`));

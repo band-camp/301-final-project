@@ -91,6 +91,8 @@ function Event(info){
   this.date = info.dates.start.localDate;
   this.startTime = info.dates.start.localTime;
   this.venue = info._embedded.venues[0].name;
+  this.city = info._embedded.venues[0].city.name;
+  this.state = info._embedded.venues[0].state.name;
 }
 
 function loadIndex(request, response) {
@@ -135,10 +137,10 @@ function getEvents(request, response ) {
 
 function addToMyEvents(request, response) {
   console.log(request.body);
-  let {eventName, eventURL, image, date, startTime, venue} = request.body;
+  let {eventName, eventURL, image, date, startTime, venue, city, state} = request.body;
 
-  let SQL = 'INSERT INTO events(event_name, event_url, image, date, start_time, venue) VALUES ($1, $2, $3, $4, $5, $6);';
-  let values = [eventName, eventURL, image, date, startTime, venue];
+  let SQL = 'INSERT INTO events(event_name, event_url, image, date, start_time, venue, city, state) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);';
+  let values = [eventName, eventURL, image, date, startTime, venue, city, state];
 
   return client.query(SQL, values)
     .then(response.redirect('/saved'))
