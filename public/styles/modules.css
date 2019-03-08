@@ -556,8 +556,8 @@ a{
   }
   
   .introduction{
-    font-size: .6vw;  
-    width: 13.5vw;
+    font-size: .75vw;  
+    width: 18vw;
   }
 
   #Cory {
@@ -588,27 +588,27 @@ a{
   
   #cory-text {
     position: absolute;
-    top: 6vh;
-    left: 20.5%;
+    top: 3vh;
+    left:1vw;
   }
   
   #aaron-text {
     position: absolute;
-    top: 6vh;
-    left: 36%;
+    top: 45vh;
+    left: 1vw;
     
   }
   
   #vanessa-text {
     position: absolute;
-    top: 6vh;
-    right: 36%;
+    top: 3vh;
+    right: 1vw;
   }
   
   #chris-text {
     position: absolute;
-    top: 6vh;
-    right: 20%;
+    top: 45vh;
+    right: 1vw;
   }
 }
 
