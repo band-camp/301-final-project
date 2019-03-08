@@ -10,6 +10,7 @@ body{
     position: relative;
     height: 100vh;
     background-color: #222629;
+    padding: 0 0 7vh 0;
 }
 
 header{
