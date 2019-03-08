@@ -217,18 +217,28 @@ iframe{
 
 
 /*------About Us PAGE--------*/
+#aboutbody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#background{
+  width: 100%;
+}
+
 #team-name{
   font-family: 'Gloria Hallelujah', cursive;
   text-shadow: 10px 10px #8a28e2;
   left:40vw;
-  bottom:7vw;
+  bottom: 2em;
   font-size: 3.5em;
   position: absolute;
+  width: 5em;
 }
 
 .member{
-  width: 12em;
-  height: 15em;
+  width:20vw;
   transition: all .1s ease-in-out;
   position: absolute;
 }
@@ -241,72 +251,65 @@ iframe{
   z-index: 9; 
 }
 
-#background-band {
-  position: relative;
-  background-image:  url("/images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center top; 
-}
+
 
 .introduction {
   color: white;
-  width:300px;
-  height:200px;
-  font-size: 1em;
+  width:23vw;
+  font-size: 1vw;
   display: none;
   line-height: 1.5em;
 }
 
 #Cory {
   position: absolute;
-  top: 11em;
-  left: calc(50vw - 24em);
+  top: 24vw;
+  left: 5vw
 }
 
 #Aaron {
   position: absolute;
-  top: 10em;
-  left: calc(50vw - 12em);
+  top: 21vw;
+  left: 29vw;
 }
 
 #Vanessa {
   position: absolute;
-  top: 13em;
-  left: calc(50vw - 1em);
+  top: 26.5vw;
+  left: 50vw;
 }
 
 #Chris {
   position: absolute;
-  top: 12em;
-  left: calc(50vw + 10em);
+  top: 25vw;
+  left: 72vw;
 }
 
 
 
 #cory-text {
   position: absolute;
-  top: 50px;
-  left: 10px;
+  top: 6vh;
+  left: 2%;
 }
 
 #aaron-text {
   position: absolute;
-  top: 300px;
-  left: 10px;
+  top: 6vh;
+  left: 26%;
   
 }
 
 #vanessa-text {
   position: absolute;
-  top: 50px;
-  right: 5px;
+  top: 6vh;
+  right: 26%;
 }
 
 #chris-text {
   position: absolute;
-  top: 300px;
-  right: 5px;
+  top: 6vh;
+  right: 2%;
 }
 
  .member-name {
@@ -397,6 +400,10 @@ a{
     padding: .75em;
   }
   
+  #single-event *{
+    margin: .5em;
+  }
+
   #single-event ul{
     display:flex;
     flex-direction: column;

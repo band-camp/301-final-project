@@ -100,13 +100,17 @@ function loadIndex(request, response) {
 
 // Searches route handler
 function loadSimilarArtists(request, response) {
+  console.log('Load Artists')
   let url = `https://tastedive.com/api/similar?q=${request.body.search}&type=music&limit=20&info=1&k=${process.env.TASTE_DIVE_API_KEY}`
 
   superagent.get(url)
     .then(results => results.body.Similar.Results.map(bandResults => new Band(bandResults)))
-    // .then(results => console.log(results))
     .then(results => {
-      response.render('pages/searches/show', { searchResults: results });
+      if(results.length){
+        response.render('pages/searches/show', { searchResults: results });   
+      }else{
+      handleError(err, response);
+      }
     })
     .catch(err => handleError(err, response));
 }
