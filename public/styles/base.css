@@ -18,6 +18,7 @@ header{
     background-color: black;
     position: fixed;
     top: 0;
+    z-index: 4;
 }
 
 footer{
@@ -30,6 +31,7 @@ footer{
     align-items: center;
     background-color: black;
     color: #f9f9f9;
+    z-index: 4;
 }
 
 @media screen and (min-width:769px){
