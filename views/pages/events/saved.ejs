@@ -15,10 +15,11 @@
               
     
                 <ul>
-                  <li id="eventName"><%= event.eventName %></li>
+                  <li id="eventName"><%= event.event_name %></li>
                   <li id="venue"><%= event.venue %></li>
                   <li id="date">Date: <%= event.date %></li>
-                  <li id="time">Doors: <%= event.startTime %></li>
+                  <li id="time">Doors: <%= event.start_time %></li>
+                  <li id="location"><%= event.city%>, <%=event.state%></li>
                   <button id="saved-url"><a href=<%= event.eventURL %>>Buy Tickets</a></button>
                   <form action="<%= `/delete/${event.id}` %>" method="POST" id='delete'>
                     <button id="remove">Remove from My Events</button>
