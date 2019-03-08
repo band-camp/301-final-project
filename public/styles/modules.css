@@ -217,25 +217,29 @@ iframe{
 
 
 /*------About Us PAGE--------*/
-#aboutbody{
+#aboutmain{
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 #background{
   width: 100%;
+  z-index: -5;
 }
 
 #team-name{
   font-family: 'Gloria Hallelujah', cursive;
   text-shadow: 10px 10px #8a28e2;
-  left:40vw;
+  left:22vw;
   bottom: 2em;
   font-size: 3.5em;
   position: absolute;
   width: 5em;
+  text-align: left;
 }
+
 
 .member{
   width:20vw;
@@ -251,14 +255,19 @@ iframe{
   z-index: 9; 
 }
 
-
+#second{
+  float: right;
+}
 
 .introduction {
   color: white;
   width:23vw;
   font-size: 1vw;
+  font-family: 'Courier New', Courier, monospace;
   display: none;
   line-height: 1.5em;
+  background-color: rgba(71, 75, 79, .7);
+  z-index: -1;
 }
 
 #Cory {
@@ -289,26 +298,23 @@ iframe{
 
 #cory-text {
   position: absolute;
-  top: 6vh;
   left: 2%;
 }
 
 #aaron-text {
   position: absolute;
-  top: 6vh;
   left: 26%;
   
 }
 
 #vanessa-text {
   position: absolute;
-  top: 6vh;
   right: 26%;
 }
 
 #chris-text {
   position: absolute;
-  top: 6vh;
+  top: 2vh;
   right: 2%;
 }
 
@@ -424,6 +430,76 @@ a{
   
   a{
     color: #474b4f;
+  }
+
+  /*----About Us-----*/
+  #background{
+    width:60%
+  }
+
+  #team-name{
+    bottom: .25em;
+    left:40vw;
+  }
+
+  .member{
+    width:15vw; 
+  }
+  
+  .introduction{
+    font-size: .6vw;  
+    width: 13.5vw;
+  }
+
+  #Cory {
+    position: absolute;
+    top: 12vw;
+    left: 22vw
+  }
+  
+  #Aaron {
+    position: absolute;
+    top: 9vw;
+    left: 36vw;
+  }
+  
+  #Vanessa {
+    position: absolute;
+    top: 13.5vw;
+    left: 49vw;
+  }
+  
+  #Chris {
+    position: absolute;
+    top: 12vw;
+    left: 62vw;
+  }
+  
+  
+  
+  #cory-text {
+    position: absolute;
+    top: 6vh;
+    left: 20.5%;
+  }
+  
+  #aaron-text {
+    position: absolute;
+    top: 6vh;
+    left: 36%;
+    
+  }
+  
+  #vanessa-text {
+    position: absolute;
+    top: 6vh;
+    right: 36%;
+  }
+  
+  #chris-text {
+    position: absolute;
+    top: 6vh;
+    right: 20%;
   }
 }
 
