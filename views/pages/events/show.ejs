@@ -15,9 +15,9 @@
             <img src=<%= eventResults.image %>>
             <ul id="single-event">
               <li id="eventName"><%= eventResults.eventName %></li>
-              <li id="venue"><%= eventResults.venue %></li>
-              <li id="date">Date: <%= eventResults.date %></li>
-              <li id="time">Doors: <%= eventResults.startTime %></li>
+              <li id="venue" class="other"><%= eventResults.venue %></li>
+              <li id="date" class="other">Date: <%= eventResults.date %></li>
+              <li id="time" class="other">Doors: <%= eventResults.startTime %></li>
               <button id="eventURL"><a href=<%= eventResults.eventURL %>>Buy Tickets</a></button>
               
             </ul>

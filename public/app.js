@@ -17,8 +17,8 @@ $('button').click(function() {
 
       $(`#${bandName}`).empty();
       result.forEach(obj => $(`#${bandName}`)
-        .append(`<li>${obj.eventName} </li>
-        <li>${obj.date}</li>
+        .append(`<li class="event-name">${obj.eventName} </li>
+        <li class="event-date">${obj.date}</li>
         <form action="/bands/${fullBandName}" method="post">
         <fieldset>
           <input type="text" name="eventName" value="${obj.eventName}" hidden/>
@@ -27,7 +27,7 @@ $('button').click(function() {
           <input type="text" name="date" value="${obj.date}" hidden>
           <input type="text" name="startTime" value="${obj.startTime}" hidden>
           <input type="text" name="venue" value="${obj.venue}" hidden>
-          <button id="${obj.date}" type="submit">${'Event Details'}</button>
+          <button id="${obj.date}" type="submit" class="choose-button">${'Event Details'}</button>
         </fieldset>
       </form>`));
 

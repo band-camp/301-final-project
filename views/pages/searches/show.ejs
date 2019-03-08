@@ -12,7 +12,7 @@
     <main>
           <% searchResults.forEach(band =>{ %>
             <div id="bands-results">
-              <h3><%= band.bandname %></h3>
+              <h3 id="band-name"><%= band.bandname %></h3>
               <p id="description"><%= band.description %></p>
               <iframe width="560" height="315" src="<%= band.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
